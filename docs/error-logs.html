@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Error Logs</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">Textiles Docs</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="models/index.html">Models</a>
+        <a href="services/product.html">Services</a>
+        <a href="controllers/product.html">Controllers</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <span class="badge">Logs</span>
+    <h1>Error Logs</h1>
+    <p class="meta">Errors are written to <code>src/logs/error.log</code> via the logger.</p>
+
+    <div class="doc-card">
+      <h2>How It Works</h2>
+      <ul>
+        <li>All unhandled controller errors flow to <code>errorHandler</code>.</li>
+        <li>The handler writes a line to <code>src/logs/error.log</code>.</li>
+        <li>The API returns <code>500 Internal Server Error</code>.</li>
+      </ul>
+    </div>
+
+    <a class="back" href="index.html">Back to Docs</a>
+  </div>
+</body>
+</html>

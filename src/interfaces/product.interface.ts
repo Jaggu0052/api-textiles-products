@@ -1,0 +1,9 @@
+export interface Product {
+  name: string;
+  description?: string;
+  price: number;
+  imageUrl?: string;
+  inStock: boolean;
+  createdAt?: Date;
+  updatedAt?: Date;
+}

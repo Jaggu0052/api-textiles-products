@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Models</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">Textiles Docs</div>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Models</a>
+        <a href="../services/index.html">Services</a>
+        <a href="../controllers/index.html">Controllers</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <span class="badge">Models</span>
+    <h1>All Models</h1>
+    <p class="meta">Field types and validation summary.</p>
+
+    <div class="doc-card">
+      <h2>Product</h2>
+      <ul>
+        <li><code>name</code>: string (required) - validation: string min 1</li>
+        <li><code>description</code>: string (optional)</li>
+        <li><code>price</code>: number (required) - validation: nonnegative</li>
+        <li><code>imageUrl</code>: string (optional) - validation: url</li>
+        <li><code>inStock</code>: boolean (default true)</li>
+      </ul>
+    </div>
+
+    <div class="doc-card">
+      <h2>User</h2>
+      <ul>
+        <li><code>name</code>: string (required) - validation: min 1</li>
+        <li><code>email</code>: string (required) - validation: email</li>
+        <li><code>passwordHash</code>: string (required) - validation: min 6</li>
+        <li><code>userTypeId</code>: ObjectId (optional)</li>
+      </ul>
+    </div>
+
+    <div class="doc-card">
+      <h2>User Type</h2>
+      <ul>
+        <li><code>name</code>: string (required, unique) - validation: min 1</li>
+        <li><code>description</code>: string (optional)</li>
+      </ul>
+    </div>
+
+    <div class="doc-card">
+      <h2>Stock</h2>
+      <ul>
+        <li><code>productId</code>: ObjectId (required) - validation: string min 1</li>
+        <li><code>quantity</code>: number (required) - validation: int, nonnegative</li>
+        <li><code>location</code>: string (optional)</li>
+      </ul>
+    </div>
+
+    <div class="doc-card">
+      <h2>Payment</h2>
+      <ul>
+        <li><code>orderId</code>: ObjectId (required) - validation: string min 1</li>
+        <li><code>amount</code>: number (required) - validation: nonnegative</li>
+        <li><code>paymentTypeId</code>: ObjectId (optional)</li>
+        <li><code>status</code>: enum (pending|paid|failed)</li>
+        <li><code>reference</code>: string (optional)</li>
+      </ul>
+    </div>
+
+    <div class="doc-card">
+      <h2>Payment Type</h2>
+      <ul>
+        <li><code>name</code>: string (required, unique) - validation: min 1</li>
+        <li><code>description</code>: string (optional)</li>
+      </ul>
+    </div>
+
+    <div class="doc-card">
+      <h2>Cart</h2>
+      <ul>
+        <li><code>userId</code>: ObjectId (required) - validation: string min 1</li>
+        <li><code>items</code>: array of { productId, quantity }</li>
+      </ul>
+    </div>
+
+    <div class="doc-card">
+      <h2>Order</h2>
+      <ul>
+        <li><code>userId</code>: ObjectId (required) - validation: string min 1</li>
+        <li><code>items</code>: array of { productId, quantity, price }</li>
+        <li><code>totalAmount</code>: number (required) - validation: nonnegative</li>
+        <li><code>status</code>: enum (pending|paid|shipped|delivered|cancelled)</li>
+      </ul>
+    </div>
+
+    <div class="doc-card">
+      <h2>Favorite</h2>
+      <ul>
+        <li><code>userId</code>: ObjectId (required) - validation: string min 1</li>
+        <li><code>productId</code>: ObjectId (required) - validation: string min 1</li>
+      </ul>
+    </div>
+
+    <a class="back" href="../index.html">Back to Docs</a>
+  </div>
+</body>
+</html>

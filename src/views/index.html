@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Server Running</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #87ceeb;
+      color: #0b2b3a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(11, 43, 58, 0.2);
+      border-radius: 16px;
+      padding: 28px 32px;
+      width: min(720px, 92vw);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      text-align: center;
+    }
+    .title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+    .marquee {
+      overflow: hidden;
+      border-radius: 10px;
+      border: 1px solid rgba(11, 43, 58, 0.2);
+      background: #ffffff;
+      padding: 8px 0;
+    }
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      white-space: nowrap;
+      animation: scroll-left 10s linear infinite;
+    }
+    .marquee:hover span {
+      animation-play-state: paused;
+    }
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="title">Server Is Running</div>
+    <div class="subtitle">Listening on port {{PORT}}</div>
+    <div class="marquee">
+      <span>Textiles Project API is up. Open /docs/v1 for documentation and /api/v1 for endpoints.</span>
+    </div>
+  </div>
+</body>
+</html>

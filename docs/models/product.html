@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Model</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">Textiles Docs</div>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Models</a>
+        <a href="../services/index.html">Services</a>
+        <a href="../controllers/index.html">Controllers</a>
+        <a href="../error-logs.html">Error Logs</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <span class="badge">Model</span>
+    <h1>Product</h1>
+    <p class="meta">Catalog item in the textiles store.</p>
+    <div class="doc-card">
+      <h2>Fields</h2>
+      <ul>
+        <li><code>name</code> (string, required)</li>
+        <li><code>description</code> (string, optional)</li>
+        <li><code>price</code> (number, required)</li>
+        <li><code>imageUrl</code> (string, optional)</li>
+        <li><code>inStock</code> (boolean, default true)</li>
+        <li><code>createdAt</code>, <code>updatedAt</code> (timestamps)</li>
+      </ul>
+    </div>
+    <a class="back" href="../index.html">Back to Docs</a>
+  </div>
+</body>
+</html>

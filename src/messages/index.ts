@@ -1,0 +1,71 @@
+export const messages = {
+  product: {
+    created: "Product created successfully",
+    listed: "Products fetched successfully",
+    fetched: "Product fetched successfully",
+    updated: "Product updated successfully",
+    deleted: "Product deleted successfully",
+  },
+  user: {
+    created: "User created successfully",
+    listed: "Users fetched successfully",
+    fetched: "User fetched successfully",
+    updated: "User updated successfully",
+    deleted: "User deleted successfully",
+  },
+  userType: {
+    created: "User type created successfully",
+    listed: "User types fetched successfully",
+    fetched: "User type fetched successfully",
+    updated: "User type updated successfully",
+    deleted: "User type deleted successfully",
+  },
+  stock: {
+    created: "Stock created successfully",
+    listed: "Stock fetched successfully",
+    fetched: "Stock item fetched successfully",
+    updated: "Stock updated successfully",
+    deleted: "Stock deleted successfully",
+  },
+  payment: {
+    created: "Payment created successfully",
+    listed: "Payments fetched successfully",
+    fetched: "Payment fetched successfully",
+    updated: "Payment updated successfully",
+    deleted: "Payment deleted successfully",
+  },
+  paymentType: {
+    created: "Payment type created successfully",
+    listed: "Payment types fetched successfully",
+    fetched: "Payment type fetched successfully",
+    updated: "Payment type updated successfully",
+    deleted: "Payment type deleted successfully",
+  },
+  cart: {
+    created: "Cart created successfully",
+    listed: "Carts fetched successfully",
+    fetched: "Cart fetched successfully",
+    updated: "Cart updated successfully",
+    deleted: "Cart deleted successfully",
+  },
+  order: {
+    created: "Order created successfully",
+    listed: "Orders fetched successfully",
+    fetched: "Order fetched successfully",
+    updated: "Order updated successfully",
+    deleted: "Order deleted successfully",
+  },
+  favorite: {
+    created: "Favorite created successfully",
+    listed: "Favorites fetched successfully",
+    fetched: "Favorite fetched successfully",
+    updated: "Favorite updated successfully",
+    deleted: "Favorite deleted successfully",
+  },
+  auth: {
+    login: "Login successful",
+  },
+  common: {
+    notFound: "Resource not found",
+  },
+};
